@@ -1,0 +1,41 @@
+{
+  "name": "skip-local-postinstall",
+  "version": "1.0.0",
+  "description": "Skips postinstall when installed locally.",
+  "main": "./index.js",
+  "source": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "prettier": "padua/configuration/.prettierrc.json",
+  "eslintConfig": {
+    "extends": "./node_modules/padua/configuration/eslint.cjs",
+    "rules": {
+      "no-console": 0
+    }
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "./node_modules/padua/configuration/tsconfig.json"
+      }
+    },
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest",
+      "^.+\\.jsx?$": [
+        "babel-jest",
+        {
+          "configFile": "./node_modules/padua/configuration/.babelrc"
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "padua": "^0.0.4"
+  },
+  "engines": {
+    "node": ">= 13.2.0"
+  }
+}
