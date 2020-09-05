@@ -33,7 +33,7 @@
     }
   },
   "devDependencies": {
-    "padua": "^0.0.4"
+    "padua": "^0.0.8"
   },
   "engines": {
     "node": ">= 13.2.0"
