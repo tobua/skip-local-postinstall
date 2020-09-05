@@ -1,6 +1,6 @@
 {
   "name": "skip-local-postinstall",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Skips postinstall when installed locally.",
   "repository": "github:tobua/skip-local-postinstall",
   "main": "./index.js",
