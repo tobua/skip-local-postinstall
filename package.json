@@ -1,6 +1,6 @@
 {
   "name": "skip-local-postinstall",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Skips postinstall when installed locally.",
   "main": "./index.js",
   "source": "./index.js",
