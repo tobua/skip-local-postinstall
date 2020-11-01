@@ -1,8 +1,12 @@
 {
   "name": "skip-local-postinstall",
-  "version": "1.0.2",
   "description": "Skips postinstall when installed locally.",
+  "version": "1.0.3",
   "repository": "github:tobua/skip-local-postinstall",
+  "scripts": {
+    "build": "padua build",
+    "start": "padua watch"
+  },
   "main": "./index.js",
   "source": "./index.js",
   "types": "./index.d.ts",
@@ -10,6 +14,9 @@
     "index.js",
     "index.d.ts"
   ],
+  "devDependencies": {
+    "padua": "^0.1.4"
+  },
   "prettier": "padua/configuration/.prettierrc.json",
   "eslintConfig": {
     "extends": "./node_modules/padua/configuration/eslint.cjs",
@@ -32,9 +39,6 @@
         }
       ]
     }
-  },
-  "devDependencies": {
-    "padua": "^0.1.4"
   },
   "engines": {
     "node": ">= 13.2.0"
