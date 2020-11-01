@@ -22,3 +22,5 @@ console.log('Installing from npm.')
 ```
 
 Credits to Már Örlygsson for suggesting this on [Stackoverflow](https://stackoverflow.com/a/53239387/3185545s).
+
+**Please note** that the environment variable used for this plugin has dissapeared in npm Version 7: [GitHub Issue in npm CLI Repository](https://github.com/npm/cli/issues/2033).
