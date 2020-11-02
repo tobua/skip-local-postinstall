@@ -1,7 +1,7 @@
 {
   "name": "skip-local-postinstall",
   "description": "Skips postinstall when installed locally.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "repository": "github:tobua/skip-local-postinstall",
   "scripts": {
     "build": "padua build",
