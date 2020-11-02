@@ -7,6 +7,9 @@
     "build": "padua build",
     "start": "padua watch"
   },
+  "padua": {
+    "source": true
+  },
   "main": "./index.js",
   "source": "./index.js",
   "types": "./index.d.ts",
@@ -21,7 +24,11 @@
   "eslintConfig": {
     "extends": "./node_modules/padua/configuration/eslint.cjs",
     "rules": {
-      "no-console": 0
+      "no-console": 0,
+      "import/extensions": [
+        2,
+        "always"
+      ]
     }
   },
   "jest": {
