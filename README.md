@@ -21,6 +21,4 @@ skip()
 console.log('Installing from npm.')
 ```
 
-Credits to Már Örlygsson for suggesting this on [Stackoverflow](https://stackoverflow.com/a/53239387/3185545s).
-
-**Please note** that the environment variable used for this plugin has dissapeared in npm Version 7: [GitHub Issue in npm CLI Repository](https://github.com/npm/cli/issues/2033).
+Previously this plugin was implemented using the `process.env.INIT_CWD` variable as suggested by Már Örlygsson on [Stackoverflow](https://stackoverflow.com/a/53239387/3185545s). Since this variable was deprecated from the npm CLI starting with version 7 we're now checking whether the penultimate directory in `process.cwd()` is equal to `node_modules` which indicates postinstall being run after installing through npm.
