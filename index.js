@@ -1,10 +1,8 @@
-module.exports = () => {
-  const penultimateDirectoryNodeModules = /.+\/node_modules\/[^\/\n]+/
+export const skip = (exitCode = 0) => {
+  const { INIT_CWD, PWD } = process.env
 
-  const currentDirectory = process.cwd()
-
-  if (!currentDirectory.match(penultimateDirectoryNodeModules)) {
+  if (!INIT_CWD || INIT_CWD === PWD || INIT_CWD.indexOf(PWD) === 0) {
     console.info(`Skipping 'postinstall' on local install`)
-    process.exit(0)
+    process.exit(exitCode)
   }
 }

@@ -5,20 +5,24 @@
   "repository": "github:tobua/skip-local-postinstall",
   "scripts": {
     "build": "padua build",
-    "start": "padua watch"
+    "start": "padua watch",
+    "hello": "skip-local-postinstall && echo 'test'"
   },
   "padua": {
     "source": true
   },
+  "type": "module",
   "main": "./index.js",
+  "sideEffects": false,
+  "bin": "./bin.js",
   "source": "./index.js",
   "types": "./index.d.ts",
   "files": [
-    "index.js",
+    "**/*.js",
     "index.d.ts"
   ],
   "devDependencies": {
-    "padua": "^0.1.4"
+    "padua": "^0.3.2"
   },
   "prettier": "padua/configuration/.prettierrc.json",
   "eslintConfig": {
@@ -27,27 +31,11 @@
       "no-console": 0,
       "import/extensions": [
         2,
-        "always"
-      ]
-    }
-  },
-  "jest": {
-    "globals": {
-      "ts-jest": {
-        "tsConfig": "./node_modules/padua/configuration/tsconfig.json"
-      }
-    },
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest",
-      "^.+\\.jsx?$": [
-        "babel-jest",
-        {
-          "configFile": "./node_modules/padua/configuration/.babelrc"
-        }
+        "ignorePackages"
       ]
     }
   },
   "engines": {
-    "node": ">= 13.2.0"
+    "node": ">= 14"
   }
 }
