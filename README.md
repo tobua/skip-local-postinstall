@@ -2,12 +2,10 @@
 
 Skips (successfully exits current process) when postinstall is called locally instead of being called when the package has been published to npm.
 
-```json
+```js
 // package.json
-{
-  "scripts": {
-    "postinstall": "node ./installation.js"
-  }
+"scripts": {
+  "postinstall": "node ./installation.js"
 }
 ```
 
@@ -22,3 +20,14 @@ console.log('Installing from npm.')
 ```
 
 Requires [`process.env.INIT_CWD`](https://github.com/npm/cli/issues/2033) variable available in all stable npm releases. Credits to Már Örlygsson for suggesting this implementaiton on [Stackoverflow](https://stackoverflow.com/a/53239387/3185545s).
+
+## Compiled Postinstall File
+
+In cases where you want a compiled postinstall script (i.e. source in TypeScript) this plugin also includes a bin script. It's arguments will be passed directly to the `node` command and can include additional arguments apart from the file to run.
+
+```js
+// package.json
+"scripts": {
+  "postinstall": "skip-local-postinstall ./dist/installation.js"
+}
+```

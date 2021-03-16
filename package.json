@@ -1,12 +1,11 @@
 {
   "name": "skip-local-postinstall",
-  "description": "Skips postinstall when installed locally.",
+  "description": "Skip postinstall on local npm installs.",
   "version": "2.0.0",
   "repository": "github:tobua/skip-local-postinstall",
   "scripts": {
     "build": "padua build",
-    "start": "padua watch",
-    "hello": "skip-local-postinstall && echo 'test'"
+    "start": "padua watch"
   },
   "padua": {
     "source": true
