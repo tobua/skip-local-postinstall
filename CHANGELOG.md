@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/tobua/skip-local-postinstall/compare/v1.0.5...v2.0.0) (2021-03-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* **module:** Uses ES Module and requires node >= 14, named export, use like import { skip } from '...'
+
+* **module:** switch to ES Module, named export & use INIT_CWD again ([eb4f1b3](https://github.com/tobua/skip-local-postinstall/commit/eb4f1b3daa81dd5cb6fb8a20d05a5a67caf15ceb))
+
 ### [1.0.5](https://github.com/tobua/skip-local-postinstall/compare/v1.0.4...v1.0.5) (2020-11-03)
 
 
