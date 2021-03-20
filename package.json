@@ -1,14 +1,10 @@
 {
   "name": "skip-local-postinstall",
   "description": "Skip postinstall on local npm installs.",
-  "version": "2.0.1",
+  "version": "2.0.2",
+  "repository": "github:tobua/skip-local-postinstall",
   "license": "MIT",
   "author": "Matthias Giger",
-  "repository": "github:tobua/skip-local-postinstall",
-  "scripts": {
-    "build": "padua build",
-    "start": "padua watch"
-  },
   "padua": {
     "source": true
   },
@@ -17,7 +13,7 @@
   "sideEffects": false,
   "bin": "./bin.js",
   "source": "./index.js",
-  "types": "./index.d.ts",
+  "types": "index.d.ts",
   "files": [
     "**/*.js",
     "index.d.ts"
