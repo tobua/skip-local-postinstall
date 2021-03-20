@@ -23,7 +23,7 @@ Requires [`process.env.INIT_CWD`](https://github.com/npm/cli/issues/2033) variab
 
 ## Compiled Postinstall File
 
-In cases where you want a compiled postinstall script (i.e. source in TypeScript) this plugin also includes a bin script. It's arguments will be passed directly to the `node` command and can include additional arguments apart from the file to run.
+In cases where you want to run a postinstall script for compiled files (i.e. source in TypeScript) the file will not be there when installing the package locally. To address that this plugin also includes a bin script. It's arguments will be passed directly to the `node` command and can include additional arguments apart from the file to run.
 
 ```js
 // package.json

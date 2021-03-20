@@ -2,6 +2,8 @@
   "name": "skip-local-postinstall",
   "description": "Skip postinstall on local npm installs.",
   "version": "2.0.1",
+  "license": "MIT",
+  "author": "Matthias Giger",
   "repository": "github:tobua/skip-local-postinstall",
   "scripts": {
     "build": "padua build",
@@ -21,7 +23,7 @@
     "index.d.ts"
   ],
   "devDependencies": {
-    "padua": "^0.3.2"
+    "padua": "^0.3.4"
   },
   "prettier": "padua/configuration/.prettierrc.json",
   "eslintConfig": {
