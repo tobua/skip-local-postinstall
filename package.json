@@ -1,16 +1,19 @@
 {
   "name": "skip-local-postinstall",
   "description": "Skip postinstall on local npm installs.",
-  "version": "2.0.2",
+  "version": "0.0.0-development",
   "repository": "github:tobua/skip-local-postinstall",
   "license": "MIT",
   "author": "Matthias Giger",
+  "scripts": {
+    "test": "padua test"
+  },
   "padua": {
     "source": true
   },
   "type": "module",
-  "main": "./index.js",
   "sideEffects": false,
+  "main": "./index.js",
   "bin": "./bin.js",
   "source": "./index.js",
   "types": "index.d.ts",
@@ -18,8 +21,15 @@
     "**/*.js",
     "index.d.ts"
   ],
+  "keywords": [
+    "skip",
+    "local",
+    "postinstall",
+    "plugin"
+  ],
   "devDependencies": {
-    "padua": "^0.3.4"
+    "jest-fixture": "^3.0.0",
+    "padua": "^0.5.6"
   },
   "prettier": "padua/configuration/.prettierrc.json",
   "eslintConfig": {
@@ -31,6 +41,20 @@
         "ignorePackages"
       ]
     }
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.jsx?$": [
+        "babel-jest",
+        {
+          "configFile": "./node_modules/padua/configuration/.babelrc"
+        }
+      ]
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/(?!jest-fixture|logua|pakag|gzip-size|strip-ansi|ansi-regex).*/"
+    ]
   },
   "engines": {
     "node": ">= 14"
