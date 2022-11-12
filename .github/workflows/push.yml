@@ -5,13 +5,24 @@ on:
     branches: [main]
 
 jobs:
-  test-release:
+  test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [16, 18, 19]
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
       - run: npm install
       - name: 🧪 Test
         run: npm test
+  release:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
       - name: 📢 Release
         uses: tobua/release-npm-action@v1
         with:

@@ -31,3 +31,20 @@ In cases where you want to run a postinstall script for compiled files (i.e. sou
   "postinstall": "skip-local-postinstall ./dist/installation.js"
 }
 ```
+
+## Alternative
+
+It's also possible to encapsulate som of the desired functionality in a one-line script. However, this only works when the script is the result of a build process and the build is removed before installation.
+
+```js
+// package.json
+"scripts": {
+  "postinstall": "node -e \"try{import('./dist/postinstall.js')}catch(e){}\""
+}
+```
+
+When using a CommonJS package without `{ type: "module" }` in package.json a require call can be used.
+
+```js
+"node -e \"try{require('./dist/postinstall.js')}catch(e){}\""
+```

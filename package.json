@@ -28,8 +28,8 @@
     "plugin"
   ],
   "devDependencies": {
-    "jest-fixture": "^3.0.0",
-    "padua": "^0.5.6"
+    "jest-fixture": "^3.0.1",
+    "padua": "^0.6.1"
   },
   "prettier": "padua/configuration/.prettierrc.json",
   "eslintConfig": {
